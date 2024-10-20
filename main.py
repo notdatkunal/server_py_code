@@ -1,11 +1,8 @@
-from fastapi import FastAPI
+from fasthtml.common import *
 
-app = FastAPI()
+app,rt = fast_app()
 
-@app.get("/")
-async def root():
-    return {"message": "Hello, world!"}
+@rt('/')
+def get(): return Div(P('Hello World!'), hx_get="/change")
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+serve(port=8000)
