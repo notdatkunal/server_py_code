@@ -29,6 +29,6 @@ def get():
 
 @rt('/')
 def get():
-    return Div(P(f'Welcome to my application'),A('go to nice page',href='/links'), hx_get="/change")
+    return Div(P(f'Welcome to my application'),A('go to links page',href='/links'), hx_get="/change")
 
 serve(port=8000)
