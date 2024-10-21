@@ -13,7 +13,7 @@ my_list: list[Link] = [
     Link(title='instagram', link='https://www.instagram.com/notdatkunal')
     , Link(title='X', link='https://www.X.com/notdatkunal')
     , Link(title='github', link='https://www.github.com/notdatkunal')
-    , Link(title='youtube', link='https://www.youtube.com/notdatkunal')
+    , Link(title='linkedin', link='https://www.linkedin.com/notdatkunal')
 
 ]
 
@@ -35,4 +35,4 @@ def get():
     return Div(P(f'Welcome to my application'), A('go to links page', href='/links'), hx_get="/change")
 
 
-serve(port=8000)
+serve(port=8000,reload=True)
