@@ -164,3 +164,4 @@ cython_debug/
 
 !/.sesskey
 !/logs.txt
+!/nohup.out
